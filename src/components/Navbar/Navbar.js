@@ -19,6 +19,7 @@ export default function Navbar() {
 
   //handleClick toggle mobile icon
   const handleClick = () => setClick(!click)
+  const closeMobileMenu = () => setClick(false)
 
   // change navbar function
   const changeNav = () => {
@@ -40,7 +41,7 @@ export default function Navbar() {
       <IconContext.Provider value={{ color: "#141414" }}>
         <Nav active={scroll} click={click}>
           <NavbarContainer>
-            <NavLogo to="/">
+            <NavLogo to="/" onClick={closeMobileMenu}>
               <NavIcon />
               Destinations
             </NavLogo>
